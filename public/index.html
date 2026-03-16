@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banff — Wild & Refined</title>
+    <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- ── 3rd-party CSS ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- ── my CSS ── -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Banff</a>
+  <ul class="nav-links">
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#map-section">Map</a></li>
+    <li><a href="#gallery-section">Gallery</a></li>
+    <li><a href="#booking-section">Book</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="glide" id="hero-glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+
+        <li class="glide__slide">
+          <img src="/assets/images/_1.jpg" alt="Lake Louise">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Lake Louise</h2>
+            <p>Start your journey with a paddle across turquoise waters?</p>
+          </div>
+        </li>
+
+        <li class="glide__slide">
+          <img src="/assets/images/_2.jpg" alt="Banff Mountains">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Johnston Canyon</h2>
+            <p>Start your journey with a walk through ancient canyons?</p>
+          </div>
+        </li>
+
+        <li class="glide__slide">
+          <img src="/assets/images/_3.jpg" alt="Bow River">
+          <div class="slide-overlay"></div>
+          <div class="slide-caption">
+            <h2>Moraine Lake</h2>
+            <p>Start your journey with a view of the iconic Ten Peaks?</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+      <button class="glide__bullet" data-glide-dir="=2"></button>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- start bar -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div data-aos="fade-up" data-aos-delay="0">
+      <div class="stat-num">6,641</div>
+      <div class="stat-label">km² Protected</div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-num">200+</div>
+      <div class="stat-label">km of Trails</div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Season Destination</div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-num">1885</div>
+      <div class="stat-label">Year Established</div>
+    </div>
+  </div>
+</div>
+
+
+<!--  ACTIVITIES — Masonry.js grid -->
+<section id="activities">
+  <div class="section-inner">
+
+    <div class="section-header">
+      <span class="section-eyebrow">Explore the Park</span>
+      <h2 class="section-title">Curated <em>experiences</em>for every adventurer</h2>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Activities</button>
+      <button class="filter-btn" data-filter="summer">Summer</button>
+      <button class="filter-btn" data-filter="winter">Winter</button>
+      <button class="filter-btn" data-filter="water">Water</button>
+      <button class="filter-btn" data-filter="land">Land</button>
+    </div>
+
+    <!-- Masonry grid -->
+    <div class="masonry-grid" id="masonry-grid">
+      <div class="grid-sizer"></div>
+      <div class="gutter-sizer"></div>
+
+      <!-- Card 1 — Camping -->
+      <div class="masonry-item" data-category="summer land">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_8.jpg" alt="Camping">
+          <span class="card-tag">Summer · Land</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Wilderness Camping</h3>
+          <div class="card-meta">
+            <span class="card-price">From $30/night</span>
+            <span class="card-duration">Overnight</span>
+          </div>
+          <p class="card-desc">Experience the true essence of the Rockies under a canopy of stars. Pitch your tent in pristine wilderness.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>Camping</h3>
+          <p>Disconnect and reconnect with nature. Firewood and bear-proof storage provided at designated sites.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Card 2 — RV Camping -->
+      <div class="masonry-item" data-category="summer land">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_12.jpg" alt="RV Camping">
+          <span class="card-tag">Summer · Land</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">RV Adventures</h3>
+          <div class="card-meta">
+            <span class="card-price">From $50/night</span>
+            <span class="card-duration">Multi-day</span>
+          </div>
+          <p class="card-desc">Hit the road with all the comforts of home. Spacious RV sites with full hookups surrounded by epic mountain views.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>RV Camping</h3>
+          <p>Enjoy powered sites with easy access to main highways and trailheads. Perfect for family road trips.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Card 3 — Glacier Exploration -->
+      <div class="masonry-item" data-category="winter land">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_13.jpg" alt="Glacier Exploration">
+          <span class="card-tag">Winter · Land</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Glacier Exploration</h3>
+          <div class="card-meta">
+            <span class="card-price">From $110</span>
+            <span class="card-duration">3–5 hrs</span>
+          </div>
+          <p class="card-desc">Step onto the ancient Athabasca Glacier. Walk on ice thousands of years old and drink fresh glacial water.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>Glacier Trek</h3>
+          <p>Guided Icewalks equipped with crampons. Learn about glaciology and the changing climate firsthand.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Card 4 — Canoeing -->
+      <div class="masonry-item" data-category="summer water">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_6.jpg" alt="Canoeing">
+          <span class="card-tag">Summer · Water</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Canoeing</h3>
+          <div class="card-meta">
+            <span class="card-price">$75/hr</span>
+            <span class="card-duration">1–3 hrs</span>
+          </div>
+          <p class="card-desc">Glide across the impossibly turquoise waters of Lake Louise or Moraine Lake with Victoria Glacier as your backdrop.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>Canoeing</h3>
+          <p>Canoes for 2–4 people. No experience needed. Life jackets provided. Best in morning for calm water.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Card 5 — Wildlife Watching -->
+      <div class="masonry-item" data-category="summer winter land">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_10.jpg" alt="Wildlife Watching">
+          <span class="card-tag">All Season · Land</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Wildlife Watching</h3>
+          <div class="card-meta">
+            <span class="card-price">From $85</span>
+            <span class="card-duration">2–4 hrs</span>
+          </div>
+          <p class="card-desc">Join expert guides to safely observe bears, elk, bighorn sheep, and moose in their natural mountain habitat.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>Wildlife Safari</h3>
+          <p>Small group tours at dawn or dusk for optimal viewing. Binoculars and spotting scopes provided.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Card 6 — Cultural Exploration -->
+      <div class="masonry-item" data-category="summer winter land">
+        <div class="card-img-wrap">
+          <img src="/assets/images/_4.jpg" alt="Cultural Exploration">
+          <span class="card-tag">All Season · Culture</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Cultural Exploration</h3>
+          <div class="card-meta">
+            <span class="card-price">From $40</span>
+            <span class="card-duration">Half Day</span>
+          </div>
+          <p class="card-desc">Discover the rich history of Banff. Visit historic sites, museums, and learn about the Indigenous peoples of the Rockies.</p>
+        </div>
+        <div class="card-hover-overlay">
+          <h3>Culture & History</h3>
+          <p>Engage with local history. Includes admission to the Whyte Museum and Cave and Basin National Historic Site.</p>
+          <button class="btn-book" onclick="scrollToBook()">Book Now</button>
+        </div>
+      </div>
+
+    </div><!-- /masonry-grid -->
+  </div>
+</section>
+
+
+<!-- Map -->
+<section id="map-section">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Navigate the Park</span>
+      <h2 class="section-title">Explore <em>Banff </em> on the map</h2>
+    </div>
+    <div id="map" data-aos="fade-up" data-aos-delay="100"></div>
+  </div>
+</section>
+
+
+<!-- GALLERY — Lightbox2 -->
+<section id="gallery-section">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Visual Journal</span>
+      <h2 class="section-title">Moments<em> captured</em> in the Rockies</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="fade-up">
+        <div class="gallery-item-inner">
+          <img src="/assets/images/_5.jpg" alt="Lake Louise">
+        </div>
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+        <img src="/assets/images/_7.jpg" alt="Hiking">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+        <img src="/assets/images/_9.jpg" alt="Skiing">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="180">
+        <img src="/assets/images/_11.jpg" alt="Bow River">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="240">
+        <img src="/assets/images/_3.jpg" alt="Canoeing">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BOOKING — Cleave.js phone input -->
+<section id="booking-section">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Reserve Your Adventure</span>
+      <h2 class="section-title">Plan your <em>journey</em>to Banff</h2>
+    </div>
+
+    <div class="booking-form" data-aos="fade-up" data-aos-delay="100">
+      <div class="form-group">
+        <label>Activity</label>
+        <select>
+          <option value="">Choose an activity</option>
+          <option>Wilderness Camping</option>
+          <option>RV Adventures</option>
+          <option>Glacier Exploration</option>
+          <option>Canoeing</option>
+          <option>Wildlife Watching</option>
+          <option>Cultural Exploration</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Arrival Date</label>
+        <input type="date" id="arrival-date">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone-input" placeholder="+1 (000) 000-0000">
+      </div>
+      <button class="btn-submit">Check Availability →</button>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer>
+  <div class="section-inner">
+    <span class="logo">Banff</span>
+    <p>Wild &amp; Refined · Canadian Rockies, Alberta · Est. 1885</p>
+    <p class="footer-small">Images courtesy of Unsplash · Glide.js · Masonry.js · Leaflet.js · AOS.js · Lightbox2 · Cleave.js</p>
+  </div>
+</footer>
+
+<!-- 3parties Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- ── Site JS ── -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
