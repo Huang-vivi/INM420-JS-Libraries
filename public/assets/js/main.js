@@ -10,9 +10,7 @@
 (function () {
   'use strict';
 
-  /* ──────────────────────────────────────────────────────────
-     1. AOS — Scroll-triggered animations
-     ────────────────────────────────────────────────────────── */
+  /*  AOS — Scroll-triggered animations */
   AOS.init({
     duration: 750,
     easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
@@ -21,9 +19,7 @@
   });
 
 
-  /* ──────────────────────────────────────────────────────────
-     2. Glide.js — Hero image slider
-     ────────────────────────────────────────────────────────── */
+  /* Glide.js — Hero image slider */
   const glide = new Glide('#hero-glide', {
     type: 'carousel',
     perView: 1,
@@ -37,9 +33,7 @@
   glide.mount();
 
 
-  /* ──────────────────────────────────────────────────────────
-     3. Nav — Scroll-aware glass effect
-     ────────────────────────────────────────────────────────── */
+  /*  Nav — Scroll-aware glass effect */
   const nav = document.getElementById('nav');
 
   window.addEventListener('scroll', () => {
@@ -47,9 +41,7 @@
   });
 
 
-  /* ──────────────────────────────────────────────────────────
-     4. Masonry.js — Activity card grid
-     ────────────────────────────────────────────────────────── */
+  /* Masonry.js — Activity card grid */
   const grid = document.getElementById('masonry-grid');
   let msnry;
 
@@ -64,10 +56,7 @@
     });
   });
 
-
-  /* ──────────────────────────────────────────────────────────
-     5. Filter Buttons — Show/hide cards + re-layout Masonry
-     ────────────────────────────────────────────────────────── */
+  /* Filter Buttons — Show/hide cards + re-layout Masonry */
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function () {
 
@@ -90,9 +79,7 @@
   });
 
 
-  /* ──────────────────────────────────────────────────────────
-     6. Leaflet.js — Interactive Banff map
-     ────────────────────────────────────────────────────────── */
+  /* Leaflet.js — Interactive Banff map */
   const map = L.map('map', {
     center: [51.1784, -115.5708],
     zoom: 12,
@@ -185,10 +172,8 @@
   });
 
 
-  /* ──────────────────────────────────────────────────────────
-     9. Utility — Smooth scroll to booking section
-        Called from card hover overlay "Book Now" buttons
-     ────────────────────────────────────────────────────────── */
+  /* Utility — Smooth scroll to booking section
+        Called from card hover overlay "Book Now" buttons */
   window.scrollToBook = function () {
     document.getElementById('booking-section')
       .scrollIntoView({ behavior: 'smooth' });
