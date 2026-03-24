@@ -263,44 +263,12 @@
   </div>
 </section>
 
-
-<!-- GALLERY — Lightbox2 -->
-<section id="gallery-section">
-  <div class="section-inner">
-    <div class="section-header" data-aos="fade-up">
-      <span class="section-eyebrow">Visual Journal</span>
-      <h2 class="section-title">Moments<em> captured</em> in the Rockies</h2>
-    </div>
-
-    <div class="gallery-grid">
-      <div class="gallery-item" data-aos="fade-up">
-        <div class="gallery-item-inner">
-          <img src="/assets/images/_5.jpg" alt="Lake Louise">
-        </div>
-      </div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
-        <img src="/assets/images/_7.jpg" alt="Hiking">
-      </div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
-        <img src="/assets/images/_9.jpg" alt="Skiing">
-      </div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="180">
-        <img src="/assets/images/_11.jpg" alt="Bow River">
-      </div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="240">
-        <img src="/assets/images/_3.jpg" alt="Canoeing">
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- BOOKING — Cleave.js phone input -->
 <section id="booking-section">
   <div class="section-inner">
     <div class="section-header" data-aos="fade-up">
       <span class="section-eyebrow">Reserve Your Adventure</span>
-      <h2 class="section-title">Plan your <em>journey</em>to Banff</h2>
+      <h2 class="section-title">Plan your <em>journey</em> to Banff</h2>
     </div>
 
     <div class="booking-form" data-aos="fade-up" data-aos-delay="100">
@@ -328,6 +296,39 @@
     </div>
   </div>
 </section>
+
+<!-- GALLERY — Lightbox2 -->
+<section id="gallery-section">
+  <div class="section-inner">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-eyebrow">Visual Journal</span>
+      <h2 class="section-title">Moments<em> captured</em> in the Rockies</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="fade-up">
+        <div class="gallery-item-inner">
+          <img src="/assets/images/_5.jpg" alt="Lake Louise" loading="lazy">
+        </div>
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="60">
+        <img src="/assets/images/_7.jpg" alt="Hiking" loading="lazy">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="120">
+        <img src="/assets/images/_9.jpg" alt="Skiing" loading="lazy">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="180">
+        <img src="/assets/images/_11.jpg" alt="Bow River" loading="lazy">
+      </div>
+      <div class="gallery-item" data-aos="fade-up" data-aos-delay="240">
+        <img src="/assets/images/_3.jpg" alt="Canoeing" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Footer -->
 <footer>
   <div class="section-inner">
@@ -344,6 +345,12 @@
 
 <!-- ── Site JS ── -->
 <script src="assets/js/main.js"></script>
+
+<script>
+  window.addEventListener('load', function() {
+    AOS.refresh();
+  });
+</script>
 
 </body>
 </html>
